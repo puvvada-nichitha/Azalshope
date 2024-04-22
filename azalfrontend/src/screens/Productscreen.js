@@ -17,8 +17,8 @@ const Productscreen = () => {
 
   
 
-  const thumbnailclick = (image) => {
-    setThumbnailImage(image);
+  const thumbnailclick = () => {
+    setThumbnailImage();
   };
 
   const additemHandlersingle = () => {
