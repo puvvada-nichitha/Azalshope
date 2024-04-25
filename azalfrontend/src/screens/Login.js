@@ -20,6 +20,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+
   const [sign, setSign] = useState({
     username: "",
     password: "",
@@ -34,6 +35,18 @@ const Login = () => {
     e.preventDefault();
     if (username === adminuser && password === adminpassword) {
       alert("Logged as Admin ");
+      const fetchdata = await fetch(
+        "https://ecommerce-sandy-omega.vercel.app/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(sign),
+        }
+      ).then((res) => res.json());
+      dispatch(loginRedux(fetchdata));
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 1000);
     } else {
       if (username && password) {
         const fetchdata = await fetch(

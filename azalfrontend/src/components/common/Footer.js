@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-    <div className='Footer bg-warning w-full' style={{background:'#00B0B5', color:'white', padding:'3rem 0',marginTop:'1rem'}}>
+    <div className='Footer bg-warning w-full' style={{background:'#00B0B5', color:'white', padding:'3rem 0'}}>
       <div className='Footercontainer '>
         <div className='row footer'>
           <div className='col-md-6 col-lg-5 col-12 ft-1' >

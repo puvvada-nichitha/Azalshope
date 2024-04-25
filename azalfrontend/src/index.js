@@ -19,6 +19,9 @@ import Checkoutscreen from './screens/Checkoutscreen'
 import Orderhistoryscreen from './screens/Orderhistoryscreen'
 import Login from "./screens/Login";
 import Register from "./screens/Register";
+import Dashdata from "./dashboard/components/Dashdata"
+import Users from "./dashboard/screens/Users";
+import Products from "./dashboard/screens/Products";
 
 
 const router = createBrowserRouter(
@@ -31,6 +34,9 @@ const router = createBrowserRouter(
       <Route path="/orderhistoryscreen" element={<Orderhistoryscreen />}/>
       <Route path="/login" element={<Login />}/>
       <Route path="/register" element={<Register />}/>
+      <Route path="/dashboard" element={<Dashdata />}/>
+      <Route path="/users" element={<Users />}/>
+      <Route path="/products" element={<Products />}/>
     </Route>
   )
 );
