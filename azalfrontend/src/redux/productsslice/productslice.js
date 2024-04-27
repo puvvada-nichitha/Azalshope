@@ -36,7 +36,7 @@ const productslice = createSlice({
     },
     addOneProduct:(state,action)=>{
       console.log(action.payload);
-      state.oneProduct=action.payload
+      state.oneProduct=action.payload  ;
     }
   },
 });
