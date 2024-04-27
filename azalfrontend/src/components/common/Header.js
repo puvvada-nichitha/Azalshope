@@ -27,6 +27,7 @@ const Header = () => {
   const use = useSelector((state) => {
     return state.products.cartitem;
   });
+  // eslint-disable-next-line no-unused-vars
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
@@ -41,6 +42,7 @@ const Header = () => {
     }, 1000);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const handleLogout = () => {
     setIsLoggedIn(false);
   };

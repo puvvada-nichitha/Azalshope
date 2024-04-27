@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   allProducts: [],
   cartitem: [],
-  oneProduct:[],
+  oneProduct: [],
 };
 
 const productslice = createSlice({
@@ -34,12 +34,18 @@ const productslice = createSlice({
       }
       console.log(action.payload);
     },
-    addOneProduct:(state,action)=>{
+    addOneProduct: (state, action) => {
       console.log(action.payload);
-      state.oneProduct=action.payload  ;
+      state.oneProduct=action.payload
     }
   },
 });
 
-export const { productRedux, addcartitemRedux,addOneProduct } = productslice.actions;
+export const {
+  productRedux,
+  addcartitemRedux,
+  addOneProduct,
+  updateProducts,
+  deleteProductRedux,
+} = productslice.actions;
 export default productslice.reducer;

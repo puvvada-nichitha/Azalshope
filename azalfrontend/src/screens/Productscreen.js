@@ -78,43 +78,11 @@ const Productscreen = () => {
                     <img src={product.images} onClick={thumbnailclick} style={{ width: "50px", height: "50px", marginBottom: "10px", cursor: "pointer"}} alt="img1"/>
                   </Col>
                   <Col xs={9} md={10} lg={11}>
-                    <div
-                      className="main-image-container"
-                      style={{ height: "100%" }}
-                    >
-                      <div
-                        className="zoom-container"
-                        style={{ position: "sticky", zIndex: 9999 }}
-                      >
-                        <ReactImageMagnify
-                          {...{
-                            smallImage: {
-                              alt: 'Thumbnail',
-                              isFluidWidth: true,
-                              src: product.thumbnail,
-                              width: 100,
-                              height: 120,
-                            },
-                            largeImage: {
-                              alt: "main image",
-                              src: product.images,
-                              width: 2000,
-                              height: 2500
-                            },
-                            lensStyle: { background: "rgba(0, 0, 0, 0.2)" },
-                            lensWidth: magnifierSize.width,
-                            lensHeight: magnifierSize.height,
-                            lensPosition: {
-                              top: cursorPosition.y - magnifierSize.height / 2,
-                              left: cursorPosition.x - magnifierSize.width / 2,
-                            },
-                            largeImageContainerStyleProps: {
-                              marginLeft: "40px", // Add space between large and small images
-                            },
-                          }}
-                        />
-                      </div>
-                    </div>
+                    <img
+                      src={thumbnailImage || product.thumbnail}
+                      alt="Main"
+                      style={{ width: '100%', height: '80vh', paddingTop: '20px' }}
+                    />
                   </Col>
                 </Row>
               </Card.Body>

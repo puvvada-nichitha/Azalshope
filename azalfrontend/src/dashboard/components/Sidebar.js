@@ -25,6 +25,7 @@ const Sidebar = ({ openSidebarToggle, OpenSidebar }) => {
     <aside
     id="sidebar"
     className={openSidebarToggle ? "sidebar-responsive" : ""}
+    style={{width:'fit-content'}}
   >
     <div className="sidebar-title">
       <div className="sidebar-brand">
@@ -51,7 +52,7 @@ const Sidebar = ({ openSidebarToggle, OpenSidebar }) => {
         </Link>
       </li>
       <li className="sidebar-list-item">
-        <Link to="/orders">
+        <Link to="#">
           <BsCart4 className="icon" /> Order
         </Link>
       </li>
@@ -61,17 +62,17 @@ const Sidebar = ({ openSidebarToggle, OpenSidebar }) => {
         </Link>
       </li>
       <li className="sidebar-list-item">
-        <Link to="/">
+        <Link to="#">
           <BsGraphUpArrow className="icon" /> Sales Report
         </Link>
       </li>
       <li className="sidebar-list-item">
-        <Link to="/">
+        <Link to="#">
           <PiChatsFill className="icon" /> Messages
         </Link>
       </li>
       <li className="sidebar-list-item">
-        <Link to="/">
+        <Link to="#">
           <IoIosSettings className="icon" /> Setting
         </Link>
       </li>
